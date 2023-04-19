@@ -54,7 +54,7 @@ const Sidebar = () => {
 
   const isConversationAlreadyExists = (recipientEmail: string) =>
     conversationsSnapshot?.docs.find((conversation) =>
-      (conversation.data() as Conversation).users.includes(recipientEmail)
+      (conversation.data() as IConversation).users.includes(recipientEmail)
     );
 
   const createConversation = async () => {
